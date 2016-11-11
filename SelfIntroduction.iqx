@@ -1,0 +1,53 @@
+﻿<item introduct>
+   /1 = "猜猜我是谁"
+   /2 = "我是谢菲，学号201511060156，心理学院本科生2015级"
+   /3 = "来自河南漯河，高中毕业自漯河高中，现任心协心理剧部副部长，喜欢各种音乐、爵士舞、耳机、手办、动漫、小说"
+   /4 = "喜欢的偶像(按重要级别排序)：道重沙由美，Bob Dylan,Bach,Chopin,Maurice Ravel,
+渡边麻友，岛崎遥香，Baby Metal,工藤遥，牧野真莉爱，AKB48，Morning Musume。。。"
+   /5 = "自我介绍说是100字，其实写不满也无所谓吧，因为真的可能写不满啊。。。现在已经开始水字数了ORZ"
+</item>
+
+<text introductiontxt>
+    /items =introduct
+	/fontstyle = ("宋体",30ptc)
+    /txcolor=(255,255,255)
+    /txbgcolor=(0,0,0)
+</text>
+
+<text thankstxt>
+    /items=("Thanks for reading.")
+    /fontstyle = ("Arial",20ptc)
+    /txcolor=(255,255,255)
+    /txbgcolor=(0,0,0)
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键随意继续")
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+<trial introduction>
+	/validresponse = (anyresponse)
+	/pretrialpause = 500
+	/stimulusframes = [1=introductiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial thankstxt>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=thankstxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<block introductionblk>
+	/screencolor = (0,0,0)
+	/trials = [1-5 = introduction]
+</block>
+
+<block thanksblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = thankstxt]
+</block>
